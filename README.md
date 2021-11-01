@@ -1,9 +1,8 @@
-
 Breve descrição do grupo
 
-* Turno: [LM]XX
-* Grupo: YY
+* Turno: M07
+* Grupo: 07
 * Alunos:
-    - Aluno1 upZZZZZ 
+    - Ricardo Nunes up201706860 
     - Aluno2 upZZZZZ
     - Aluno3 upZZZZZ
