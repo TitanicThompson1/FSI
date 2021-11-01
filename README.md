@@ -4,5 +4,5 @@ Breve descrição do grupo
 * Grupo: 07
 * Alunos:
     - Ricardo Nunes up201706860 
-    - Aluno2 upZZZZZ
+    - Tiago Lima Rocha up201406679
     - Aluno3 upZZZZZ
