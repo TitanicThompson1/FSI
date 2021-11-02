@@ -5,4 +5,4 @@ Breve descrição do grupo
 * Alunos:
     - Ricardo Nunes up201706860 
     - Tiago Lima Rocha up201406679
-    - Aluno3 upZZZZZ
+    - Luís Pinto up201806206
