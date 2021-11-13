@@ -1,0 +1,5 @@
+versão: WordPress 5.8.1
+Plugins: woocommerce 5.7.2 and 5.7.1
+Users: 
+- admin
+- Orval Sanford
