@@ -1,5 +1,4 @@
 # Week 5
-
 ## Task 1
 
 After compiling:
@@ -13,23 +12,15 @@ $ ./a32.out
 $ ./a64.out
 ```
 
-
 and a new shell appears in the terminal.
 
 ![a32.out execution](../Week5/img/task_1_1.PNG)
 
 ![a64.out execution](../Week5/img/task_1_2.PNG)
 
+## Task 2 & 3
 
-## Task 2
-
-
-
-
-
-## Task 3
-
-In this task, we use this vulnerable SET-UID root program to gain access to the root shell. Since, we have disabled Address Space Layout Randomization, we know that our process will be stored  in  around the same memory always in  the  stack. So in order to find the address of the running program in the memory, we compile the program in debug mode. Debugging will help us run our desired program. 
+In this task, we use this vulnerable SET-UID root program to gain access to the root shell. Since, we have disabled Address Space Layout Randomization, we know that our process will be stored  in  around the same memory always in  the  stack. So in order to find the address of the running program in the memory, we compile the program in debug mode. Debugging will help us run our desired program.
 
 So,  we  first  compile  the  program  in  the  debug  mode (-g  option),  with  the  StackGuard  counter-measure disabled and Stack executable and then run the program in debug mode using gdb:
 
@@ -76,7 +67,6 @@ content[offset:offset + L] = (ret).to_bytes(L, byteorder='little')
 # Write the content to a file
 with open('badfile', 'wb') as f:
     f.write(content)
-
 
 ```
 
