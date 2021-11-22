@@ -1,0 +1,20 @@
+Desafio 1
+
+P: Existe algum ficheiro que é aberto e lido pelo programa?
+R: Sim, o mem.txt
+P: Existe alguma forma de controlar o ficheiro que é aberto?
+R: Sim. Com o buffer overflow, consigo mudar o nome do ficheiro a abrir
+P: Existe algum buffer-overflow? Se sim, o que é que podes fazer?
+R: Sim. O array buffer tem apenas len=20, mas estão a escrever 28bytes para lá.
+
+Porta 4003: flag{cbf6b24cc30f52c16c2f972f043b42a4}
+
+
+
+Desafio 2
+P: Que alterações foram feitas?
+R: Adicionou-se um canário entre o nome do ficheiro e o buffer
+P: Mitigam na totalidade o problema?
+R: Não
+P: É possivel ultrapassar a mitigação usando uma técnica similar à que foi utilizada anteriormente?
+R: Sim
