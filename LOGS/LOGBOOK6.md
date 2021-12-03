@@ -12,11 +12,13 @@ To crash the program, we provided the following string: `hello %s`. This string 
 ## Task 2
 In this task we try to read variables from the stack. First we discover the length of the input so we can, with the "%x", read our input from the stack. After "%x" 64 times the printf pointer is pointing to the first values we passed to the server.
 ![Task2 Pic1](../Week6/img/task2_1.PNG)
+
 ![Task2 Pic2](../Week6/img/task2_2.PNG)
 
 The Next step was to read the value of the secret message(quite a funny content...."Secret Message"XD). To do so, the 4 first bytes are the address of the Secret address, then we add 63 "%x"(it makes the pointer move) and the a "%s".This takes the next value(it assumes it is an address) pointed by the pointer and prints the content of that address.  Since the next value is the first value we put on the server, the "%s" prints the value of the address we chose.
 
 ![Task2 Pic3](../Week6/img/task2_3.PNG)
+
 ![Task2 Pic4](../Week6/img/task2_4.PNG)
 
 
@@ -26,6 +28,7 @@ USing the knoledge of the previous task, we put the fisrt values to be the addre
 
 
 ![Task3 Pic1](../Week6/img/task3_1.PNG)
+
 ![Task3 Pic2](../Week6/img/task2_2.PNG)
 
 At a first glance, the value "%n" puts on the address cannot be defined, however we are able to use dummy char that allow us to print more char than the size of the string. Using that we can simulate that the printf read an arbitrary number of char.
@@ -34,4 +37,5 @@ We used the number 19980 that was the result of 0x5000 in decimal subtracted by 
 
 
 ![Task3 Pic3](../Week6/img/task3_3.PNG)
+
 ![Task3 Pic4](../Week6/img/task3_4.PNG)
