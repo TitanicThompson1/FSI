@@ -39,3 +39,44 @@ We used the number 19980 that was the result of 0x5000 in decimal subtracted by 
 ![Task3 Pic3](../Week6/img/task3_3.PNG)
 
 ![Task3 Pic4](../Week6/img/task3_4.PNG)
+
+
+## CTF 
+
+### Challenge 1
+
+The program has the following protections:
+- **Partial RELRO**: Means that only part of the Global Offset Table is read-only.
+-  **Canary**: Puts a canary between some variables on the stack. If the canary is overwritten, the program stops.
+-  **NX enable**: The stack hasn't execution permission.
+-  **No PIE**: The addresses aren't randomized.
+
+![CTF C1 1](../Week6/img/ctf_1_1.PNG)
+
+This security mechanism makes buffer overflow attack a lot harder. However, it doesn't protect against string format attacks.
+
+After analysing the [code](../Week6/Semana6-Desafio1/main.c), we concluded that:
+- The vulnerable codes lies on line 27 `printf(buffer)`
+- The above line of code allows an attacker to print the value of an address of memory or even change the value of it.
+- With this in mind, we can print the flag by knowing the address of the variable that holds it.
+
+Using gdb, we found out that the address `0x804c060`. The exploit code can be found [here](../Week6/Semana6-Desafio1/exploit_example.py). By injeting the string `0x804c060%s`, we got the flag:
+
+![CTF C1 2](../Week6/img/ctf_1_2.PNG)
+
+### Challenge 2
+
+Using checksec, we verified that there were no changes to the program protections:
+
+![CTF C2 1](../Week6/img/ctf_2_1.PNG)
+
+
+After analysing the [code](../Week6/Semana6-Desafio2/main.c), we concluded that:
+- The vulnerable codes lies on line 27: `printf(buffer)`. This line allows an attacker to print the value of an address of memory or even change the value of it.
+- The flag is not loaded to memory. But, if we change the value of the variable **key** to 48.879, we creat a terminal that can be used to dumb the flag 
+
+The address of variable key is `0x804c034`. The exploit code can be found [here](../Week6/Semana6-Desafio2/exploit_example.py). By injeting the string `0x010101804c034%.48871x%n`, we were able to create the shell and dump the flag
+
+![CTF C2 2](../Week6/img/ctf_2_2.PNG)
+
+![CTF C2 3](../Week6/img/ctf_2_3.PNG)
