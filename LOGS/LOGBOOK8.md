@@ -50,3 +50,28 @@ Besides all that there is a big limitation that sets us back, and it has to do w
 ***
 
 ## Task 3
+
+### Task 3.1
+
+Changing the salary from within authentication walls is a trivial task. Since we are already authorised to change our values in the database, then all we need to do is in the nickname input field type the following data: `Alice', Salary=25000 -- `. This will set the values of name and Salary collumns.
+
+![task 3_1 results](../Week8/img/task3_1.png)
+
+Of course if we didn't want to raise any suspitions we would have to set the values for the remaining collumns as well. But this delivers the point we were trying to make.
+
+### Task 3.2
+
+Much like in the previous task, since we're already executing an UPDATE statement, it's quite easy to inject some malicious SQL to change other people's data (namely our hypothetical horrible boss Boby).
+In the first input field (nickname) do: `Be a better boss!', Salarry=1 where name='Boby'; -- `.
+
+And when he logs in he shall have a very unpleasant surprise:
+
+![task 3_2 results](../Week8/img/task3_2.png)
+
+### Task 3.3
+
+Given that we know the encryption algorithm used in this application (that being SHA1), altering someone's password is no different than the previous exercises. We login with our credentials or hack someone's account as shown in 2.1; then in the edit profile page we type the following sql in the nickname input field: `Boby', Password=SHA('frango') where name='Boby' -- `.
+
+And the end result would be catastrophic:
+
+![task 3_3 results](../Week8/img/task3_3.png)
