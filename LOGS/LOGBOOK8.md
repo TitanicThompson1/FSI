@@ -75,3 +75,35 @@ Given that we know the encryption algorithm used in this application (that being
 And the end result would be catastrophic:
 
 ![task 3_3 results](../Week8/img/task3_3.png)
+
+
+## CTF
+
+### Part 1
+
+Given the website, the first step was to investigate possible vulnerabilities on the site and discover what the website allowed us to do.
+The identified point of failure was the login form. After that we analysed the code and dicovered that the user input concatenated with the query to the database. That allowed us to introduce sql that would render the code useless. Th efollowing code is the one used in the sql injection.
+It closed the parentheses and put a "or true" and commented the rest of the query. As the condition was true, a user was returned. If that didn't work we could intrudce admin as the user and make the "or true" part in the password to force the returned user to be the admin.
+
+![Sql injection code](../Week8/img/ctf_1.png)
+
+![Part 1 Flag](../Week8/img/ctf_2.png)
+
+### Part 2
+
+The second part worked as a blackbox. We analysed the website and found the interesting feature of "Ping". Ping could be done multiple ways but teh one we figured it was being used was the "ping" utility. As that was the case, the website was making a call to the shell and possibly in a non secure way. To test that we used the following command.
+
+![Part 2 First command](../Week8/img/ctf_3.png)
+
+Since the code was being called in a non secure way it allowed us to pass extra commands ans input. In this case we passed the && to allow us to run another command, followed by the echo command that prints the to the shell. The result of the echo command was retrieved to the webpage: 
+
+![Part 2 First command result](../Week8/img/ctf_4.png)
+
+, showing we could use other commands and seee the result on the website. Since our goal was to get the flag contained in the file /flag.txt we used the utility "cat" that prints the content of a file to the stdout.
+
+![Part 2 Second command](../Week8/img/ctf_5.png)
+
+After that, the result showed, as previously, the result of the ping command but also the content of the "cat" call.
+
+
+![Part 2 Second command Result](../Week8/img/ctf_6.png)
