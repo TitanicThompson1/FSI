@@ -31,6 +31,7 @@ To steal the user cookie, we introduce an image tag that has the source an IP co
 
 ## Task 4
 Before writting the payload, we need to know how does user add a friend. Using the tool HTTP Header Live, we discovered the structure of the HTTP request ([here](../Week10/tasks/http_req.txt)). So, the user needs to send a request to www.seed-server.com/action/friends/add with the friend he wants to add and an **elgg_ts** and a **elgg_token** twice repeated. This tokens prevent the occurrence of CSRF, where an attacker forces a user to do an action on a web application where he is currently authenthicated. By sending this tokens along with the request, it guarantees that the request came from the form and that the user is aware of it.
+
 Everyone has an unique friend ID. To find Samy's ID, we loggin in as Alice and sent a friend request to Samy.
 After introducing the payload in the About Me field and saving, we can see that Samy is now a friend of himself (since he visited his own profile).
 
