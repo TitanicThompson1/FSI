@@ -45,3 +45,52 @@ Using Text Mode, is not possible to do a XSS attack, since that in this mode the
 
 ![Task 4.3](../Week10/img/task_4_3.PNG)
 *Figure 4.3: Attempt to break Text Mode*
+
+
+## CTF
+
+### 1
+The first ctf had an easy approach. 
+First, we analysed what we could do with the website and easily found that we could inject javascript code to create an alert.
+![Alert](../Week10/img/ctf_1_1.png)
+![Alert](../Week10/img/ctf_1_2.png)
+
+Since the description stated that the admin page was similar to ours, we crafted a js script to retrieve the accept button and click it. As this would be done when the admin enters the page, the server could not know if it was a wanted click or, in this case a harmful click.
+
+
+![script to get the flag](../Week10/img/ctf_1_3.png)
+
+Showing the flag.
+
+### 2
+
+The checksec showed the program had few protections and the use of a buffer overflow exploitation was trivial since no cannary was found. 
+
+
+![checksec result](../Week10/img/ctf_2_1.png)
+
+For this attack we first analysed the code and found it had a buffer with a maximum size of 100 bytes.
+Since gets() function is not safe we could use it to make a buffer overflow attack.
+
+The payload consisted of the code necessary to run the shell, followed by NULL values. up to 108 bytes (100 for the buffer plus the framepointer address).
+After that we put the buffer address that lead to the shell being run.
+The buffer address was placed in the place of the return function. After get function returned, control is "returned" to the shell code placed in the buffer zone.  
+A ``cat flag.txt` followed and the flag was captured.
+
+
+![flag cature](../Week10/img/ctf_2_2.png)
+
+
+![python code](../Week10/img/ctf_2_3.png)
+
+
+
+
+
+
+
+
+
+
+
+
