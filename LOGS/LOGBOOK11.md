@@ -68,7 +68,7 @@ openssl req -newkey rsa:2048 -sha256 \
         DNS:www.fsiA.com, \
         DNS:www.fsiB.com"
 ```
-Two files were created by this command: [server.key](../Week11/server.key) and [server.csr]. We added the last tag `-addext` to add more hostnames to the certificate.
+Two files were created by this command: [server.key](../Week11/server.key) and [server.csr](../Week11/server.csr). We added the last tag `-addext` to add more hostnames to the certificate.
 
 After this, we executed the following to commands, to print the decoded content of the created files. File (1) can be found [here](../Week11/file1_task2.txt) and file (2) can be found [here](../Week11/file2_task2.txt).
 ```
