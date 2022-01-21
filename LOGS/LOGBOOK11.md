@@ -149,3 +149,78 @@ After doing the above, when we tried to access the site, we were greeted with th
 
 ![Figure 4.1](../Week11/img/task4_1.PNG)
 *Figure 4.1*
+
+## Task 5
+In this task we try to make a MITM attack.
+
+First we configure the server to serve the website www.example.com adding an entry to the fsi_apache_ssl.conf file.
+
+After the changes the file is like:
+```
+<VirtualHost *:443> 
+    DocumentRoot /var/www/fsi
+    ServerName www.fsi.com
+    ServerAlias www.fsiA.com
+    ServerAlias www.fsiB.com
+    ServerAlias www.bank32W.com
+    DirectoryIndex index.html
+    SSLEngine On 
+    SSLCertificateFile /certs/fsi.crt
+    SSLCertificateKeyFile /certs/fsi.key
+</VirtualHost>
+
+<VirtualHost *:80> 
+    DocumentRoot /var/www/fsi
+    ServerName www.fsi.com
+    DirectoryIndex index_red.html
+</VirtualHost>
+
+<VirtualHost *:443> 
+    DocumentRoot /var/www/fsi
+    ServerName www.example.com
+    DirectoryIndex index.html
+    SSLEngine On 
+    SSLCertificateFile /certs/fsi.crt
+    SSLCertificateKeyFile /certs/fsi.key
+</VirtualHost>
+
+<VirtualHost *:80> 
+    DocumentRoot /var/www/fsi
+    ServerName www.example.com
+    DirectoryIndex index_red.html
+</VirtualHost>
+
+# Set the following gloal entry to suppress an annoying warning message
+ServerName localhost
+```
+
+After that we restart the server and configure the client machine to point to our server ip when trying to reach www.example.com adding
+```
+10.9.0.80       www.example.com
+```
+
+to the /etc/hosts file.
+
+We then try to access the website https://www.example.com but we get a warning from firefox because the server we are trying to access does not have a valid CA for www.example.com since we only configured it for www.fsi.com, www.fsiA.com and www.fsiB.com.
+
+
+![Figure 5.1](../Week11/img/task_5.png)
+
+However, if we ignore the warning we can access the website initially at www.fsi.com
+
+## Task 6
+
+Having a  CA’s private key, since the  CA’s public key we can create any certificate for any host we want and it will be signed by the CA which is trusted.
+
+Since we have the CA both public and private key we can replicate tasks 2 and 3 with the obtained CA but for the website we want to pretend we are the owners.
+
+After we created the server certificate and signed it as the CA we managed to steal the private CA, we can pretend to be www.example.com and the browser will not suspect because the certificate is signed by a trusted CA.
+The website works fine as we can see bellow:
+
+![Figure 6.1](../Week11/img/task_6.png)
+
+Even though we are not the website owners we can pretend to be and redirect the user to our server without raising any suspicion (besides the fact the website showed is actually a green background with white letters).
+Furthermore, we could redirect user input to the actual www.example.com and pretend to be the final user because we could read the user's input (also session cookies and other critical information) because the user would trust our "in the middle website" website.
+
+The server public key signed by the CA can be found in [server.crt](../Week11/mitm/server.crt)
+The server private key can be found in [server.key](../Week11/mitm/server.key)
