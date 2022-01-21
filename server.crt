@@ -1,0 +1,102 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=www.modelCA.com, O=Model CA LTD., C=US
+        Validity
+            Not Before: Jan 21 15:32:37 2022 GMT
+            Not After : Jan 19 15:32:37 2032 GMT
+        Subject: C=US, O=Fsi Inc., CN=www.fsi.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:e9:63:f7:5b:0b:54:24:5e:82:aa:7d:f0:30:21:
+                    4d:9b:d4:fc:1d:3b:b9:83:0c:fd:a4:1f:18:d1:f7:
+                    79:1b:81:25:ec:14:f8:02:d5:3a:1a:df:fb:b1:d6:
+                    c6:fa:cd:0d:02:ed:aa:79:77:af:fb:80:82:f9:b0:
+                    79:e4:84:cf:e4:45:69:b5:3e:e8:2b:05:20:ff:de:
+                    e6:62:81:a1:ba:c4:df:7b:ef:12:9b:23:5b:a3:6a:
+                    bf:cd:0c:ee:98:96:5f:12:3a:82:70:84:35:1a:34:
+                    17:6b:40:c5:5c:2e:9c:e4:9f:c5:70:19:ba:8d:0d:
+                    01:9c:bd:e7:39:c9:41:c3:91:ae:02:08:f2:6d:a5:
+                    0b:2c:9e:d8:e7:de:9c:fb:e5:15:56:8f:16:bd:d9:
+                    4d:63:8f:da:6b:3f:0b:bc:f5:60:f0:e2:b9:57:a6:
+                    5e:e8:d2:6a:54:80:21:28:50:58:27:13:cd:55:09:
+                    0e:9d:4f:c2:08:40:6a:a3:75:45:b7:ea:4d:d8:99:
+                    b0:9a:51:d4:e7:1d:e2:c0:28:4f:c3:85:c6:63:47:
+                    ec:8e:03:fd:20:a8:f5:c1:7f:b8:a6:a8:07:c8:3f:
+                    70:56:8d:64:c4:68:ca:bf:c1:b9:0b:ce:c6:9b:e3:
+                    ae:df:41:75:76:d3:87:75:af:a5:d3:a2:62:3f:d6:
+                    15:53
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                F8:80:9B:2C:F1:99:9E:A4:83:4F:8A:E4:16:EF:51:4B:CF:31:A8:AE
+            X509v3 Authority Key Identifier: 
+                keyid:AC:26:2B:45:40:B1:CF:14:9C:3C:74:FA:08:5A:3B:02:D4:BF:94:E7
+
+            X509v3 Subject Alternative Name: 
+                DNS:www.fsi.com, DNS:www.fsiA.com, DNS:www.fsiB.com
+    Signature Algorithm: sha256WithRSAEncryption
+         23:1f:cf:71:a0:71:62:28:ee:83:66:75:bd:04:12:59:a3:03:
+         d6:2d:fe:60:64:4d:84:87:86:72:5f:7c:1b:df:f1:42:37:1c:
+         91:f1:8a:27:d9:98:d8:69:32:31:ea:33:8e:d8:05:2d:5f:1b:
+         2a:a6:d8:86:e9:bd:16:0a:89:5f:2d:77:13:30:64:0e:80:a4:
+         98:4c:db:b9:eb:88:65:fb:e1:3d:91:be:a2:b0:fa:5f:b5:69:
+         ad:a0:c5:42:9c:23:41:80:35:b9:f2:6a:2d:a0:92:47:95:e8:
+         2f:24:31:9f:5d:fb:a9:16:7a:12:1a:46:9a:a1:9b:ce:11:66:
+         dc:ab:71:9b:ec:c6:93:44:ce:35:db:6f:ee:4b:bb:a8:e0:41:
+         69:e4:fd:37:f6:7f:c8:a6:19:72:1c:11:3c:ce:26:75:4a:ac:
+         39:f0:0d:18:c0:85:8e:ea:28:9b:b5:eb:2e:af:ca:e0:63:52:
+         56:00:9f:98:3b:ca:ff:d5:6f:5e:0f:09:2b:e3:d0:fc:d2:a8:
+         7a:db:53:a2:d9:87:1e:40:df:28:31:f6:a5:85:83:8a:5d:ec:
+         60:8b:5c:8e:17:bc:57:11:cf:f4:a5:a3:85:4a:0d:a8:b7:ff:
+         55:ce:29:0a:4f:79:97:39:30:6c:84:6b:8d:59:ba:90:dc:b1:
+         a7:d7:41:8e:0a:1a:2f:d4:d5:37:01:72:b2:11:58:7b:ef:68:
+         e3:b2:bf:ca:5a:a0:c5:08:91:a6:9d:56:6c:c6:29:2b:58:30:
+         96:32:95:54:df:96:fd:0f:69:d6:20:e4:b4:32:2b:da:83:90:
+         be:75:99:f8:b7:89:ee:22:a4:11:d9:e7:6b:a4:95:c6:74:15:
+         7a:98:5b:d9:e2:7f:da:56:28:88:41:33:f0:4a:53:29:17:e6:
+         06:82:12:01:14:c1:c7:78:3e:bd:6f:a0:15:e0:06:e4:34:9c:
+         8b:a8:8d:38:05:7b:03:14:c4:43:d2:07:45:42:b5:aa:0a:e7:
+         69:3e:1c:5c:15:1a:91:2b:a6:ab:54:1c:c8:9b:80:35:47:31:
+         ed:ca:b5:24:bb:db:4a:89:1e:fa:cc:e6:42:35:d8:d9:ab:a6:
+         84:90:7a:44:0b:b5:14:41:f6:52:d1:7f:34:5a:cf:c2:2f:9e:
+         e0:64:b2:4b:e5:3d:ab:65:a2:88:1f:e8:73:2c:57:a8:e1:6a:
+         c6:21:90:21:a3:99:8c:b9:16:3e:b0:8d:6b:b4:da:6a:fc:b6:
+         92:f1:d5:13:52:3c:19:13:41:50:73:35:06:28:05:d1:9a:2c:
+         df:5e:61:a1:54:55:17:54:9a:97:96:8e:f6:fc:72:ab:c5:47:
+         04:13:ad:da:4c:62:df:f0
+-----BEGIN CERTIFICATE-----
+MIIEojCCAoqgAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwPzEYMBYGA1UEAwwPd3d3
+Lm1vZGVsQ0EuY29tMRYwFAYDVQQKDA1Nb2RlbCBDQSBMVEQuMQswCQYDVQQGEwJV
+UzAeFw0yMjAxMjExNTMyMzdaFw0zMjAxMTkxNTMyMzdaMDYxCzAJBgNVBAYTAlVT
+MREwDwYDVQQKDAhGc2kgSW5jLjEUMBIGA1UEAwwLd3d3LmZzaS5jb20wggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDpY/dbC1QkXoKqffAwIU2b1PwdO7mD
+DP2kHxjR93kbgSXsFPgC1Toa3/ux1sb6zQ0C7ap5d6/7gIL5sHnkhM/kRWm1Pugr
+BSD/3uZigaG6xN977xKbI1ujar/NDO6Yll8SOoJwhDUaNBdrQMVcLpzkn8VwGbqN
+DQGcvec5yUHDka4CCPJtpQssntjn3pz75RVWjxa92U1jj9prPwu89WDw4rlXpl7o
+0mpUgCEoUFgnE81VCQ6dT8IIQGqjdUW36k3YmbCaUdTnHeLAKE/DhcZjR+yOA/0g
+qPXBf7imqAfIP3BWjWTEaMq/wbkLzsab467fQXV204d1r6XTomI/1hVTAgMBAAGj
+gbAwga0wCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0
+ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFPiAmyzxmZ6kg0+K5BbvUUvPMaiuMB8G
+A1UdIwQYMBaAFKwmK0VAsc8UnDx0+ghaOwLUv5TnMDIGA1UdEQQrMCmCC3d3dy5m
+c2kuY29tggx3d3cuZnNpQS5jb22CDHd3dy5mc2lCLmNvbTANBgkqhkiG9w0BAQsF
+AAOCAgEAIx/PcaBxYijug2Z1vQQSWaMD1i3+YGRNhIeGcl98G9/xQjcckfGKJ9mY
+2GkyMeozjtgFLV8bKqbYhum9FgqJXy13EzBkDoCkmEzbueuIZfvhPZG+orD6X7Vp
+raDFQpwjQYA1ufJqLaCSR5XoLyQxn137qRZ6EhpGmqGbzhFm3Ktxm+zGk0TONdtv
+7ku7qOBBaeT9N/Z/yKYZchwRPM4mdUqsOfANGMCFjuoom7XrLq/K4GNSVgCfmDvK
+/9VvXg8JK+PQ/NKoettTotmHHkDfKDH2pYWDil3sYItcjhe8VxHP9KWjhUoNqLf/
+Vc4pCk95lzkwbIRrjVm6kNyxp9dBjgoaL9TVNwFyshFYe+9o47K/ylqgxQiRpp1W
+bMYpK1gwljKVVN+W/Q9p1iDktDIr2oOQvnWZ+LeJ7iKkEdnna6SVxnQVephb2eJ/
+2lYoiEEz8EpTKRfmBoISARTBx3g+vW+gFeAG5DSci6iNOAV7AxTEQ9IHRUK1qgrn
+aT4cXBUakSumq1QcyJuANUcx7cq1JLvbSoke+szmQjXY2aumhJB6RAu1FEH2UtF/
+NFrPwi+e4GSyS+U9q2WiiB/ocyxXqOFqxiGQIaOZjLkWPrCNa7Taavy2kvHVE1I8
+GRNBUHM1BigF0Zos315hoVRVF1Sal5aO9vxyq8VHBBOt2kxi3/A=
+-----END CERTIFICATE-----
